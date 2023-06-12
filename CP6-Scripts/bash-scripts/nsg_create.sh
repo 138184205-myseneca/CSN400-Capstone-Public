@@ -18,20 +18,9 @@ echo "vm_config.sh"
 source ./vm_config.sh
 echo "Loaded variabes without error"
 
-echo "---------------------------------------------------"
-echo "Checking status for Resource Group: $RG_NAME"
-if [ $(az group exists --name $RG_NAME) = false ]; then
-    echo "doesn't exit! Program will abort now!"
-    exit
-else 
-    echo "exists!"
-    echo "Resource groups:"
-    az group list --out table
-fi
-
 echo 
 echo "---------------------------------------------------"
-echo "Creating Netwrok Security Groups"
+echo "Netwrok Security Groups"
 echo "---------------------------------------------------"
 echo
 echo "Do you want to create Netwrok Security Groups? (yes/no)"

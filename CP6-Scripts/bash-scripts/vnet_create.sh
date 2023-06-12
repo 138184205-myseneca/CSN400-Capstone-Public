@@ -191,7 +191,7 @@ fi
 
 echo
 echo "---------------------------------------------------"
-echo "Do you wnat to create VNET Peerings? (yes/no)"
+echo "Do you want to create VNET Peerings? (yes/no)"
 read -r answer
    if [[ "$answer" == "yes" ]]; then
       echo "Creating VNET Peering using IDs"

@@ -1,8 +1,25 @@
 # variable declaration
 
+# //////////////////////////////////////////////////////////////
+# Update the lines that are specific to your network 
+# /////////////////////////////////////////////////////////////
+# ---------------------------------------------------
+# Windows VM Credentials
+ADMIN_PW=""
+USER_NAME=""
+
+# //////////////////////////////////////////////////////////////
+# Comment below lines 
+# /////////////////////////////////////////////////////////////
+# ---------------------------------------------------
+# Windows VM Credentials
+ADMIN_PW="@atoosanasiri2023"
+USER_NAME="atoosanasiri"
+
 # ---------------------------------------------------
 # sshkey pair names
 sshkey_name="sshkey-$ID"
+public_sshkey_file="./sshkey.pub"
 
 # ---------------------------------------------------
 # VM names
@@ -33,11 +50,6 @@ LS_NSG_name="LS-NSG-$ID"
 WS_NSG_name="WS-NSG-$ID"
 
 declare -a NSG_list=("$WC_NSG_name" "$LR_NSG_name" "$LS_NSG_name" "$WS_NSG_name")
-
-# ---------------------------------------------------
-# Windows VM Credentials
-ADMIN_PW="@atoosanasiri2023"
-USER_NAME="atoosanasiri"
 
 # ---------------------------------------------------
 # VM Image, Machine Size, Disk Settings

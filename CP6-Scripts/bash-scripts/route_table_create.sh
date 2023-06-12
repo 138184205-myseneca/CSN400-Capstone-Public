@@ -47,7 +47,7 @@ fi
 
 echo
 echo "---------------------------------------------------"
-echo "Do you wnat to create Routes? (yes/no)"
+echo "Do you want to create Routes? (yes/no)"
 read -r answer
    if [[ "$answer" == "yes" ]]; then
     echo "Creating Routes in Route Table: $RT_NAME"
@@ -75,10 +75,10 @@ read -r answer
 
 echo
 echo "---------------------------------------------------"
-echo "Do you wnat to create Ruote Table Associations? (yes/no)"
+echo "Do you want to create Ruote Table Associations? (yes/no)"
 read -r answer
    if [[ "$answer" == "yes" ]]; then
-    echo "Creating Routes in Route Table: $RT_NAME"
+    echo "Creating Subnet Associations to Route Table: $RT_NAME"
     echo
 
     az network vnet subnet update -n $Server_Subnet_association \
