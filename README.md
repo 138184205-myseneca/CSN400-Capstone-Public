@@ -1,1 +1,1 @@
-# CN400-Capstone-Public
+# CSN400-Capstone-Public

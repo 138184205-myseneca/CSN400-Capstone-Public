@@ -1,7 +1,6 @@
-# Checkpoint6 Submission
+# Creating & Configuring Resources with Azure Bash CLI
 
-- **COURSE INFORMATION: xxx**
-- **STUDENT’S NAME: xxx**
-- **STUDENT'S NUMBER: xxx**
-- **GITHUB USER ID: xxx**
-- **TEACHER’S NAME: xxx**
+### Useful Links:
+
+- [Learn to use Bash with the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/azure-cli-learn-bash)
+- [Tutorial: Create and Manage Linux VMs with the Azure CLI](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm)
