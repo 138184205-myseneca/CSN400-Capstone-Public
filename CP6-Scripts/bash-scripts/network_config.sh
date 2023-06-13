@@ -13,18 +13,6 @@ Student_vnet_address=""
 Client_Subnet_name=""
 Client_Subnet_address=""
 
-# //////////////////////////////////////////////////////////////
-# Comment below lines 
-# /////////////////////////////////////////////////////////////
-
-RG_NAME="Student-RG-964256" # your student group
-LOCATION="canadacentral" # your location
-ID="99" #unique ID assigend to you
-Student_vnet_name="Student-964256-vnet"
-Student_vnet_address="10.15.132.0/24"
-Client_Subnet_name="Virtual-Desktop-Client"
-Client_Subnet_address="10.15.132.0/24"
-
 # ---------------------------------------------------
 # Networking - Virtual Networks
 Router_vnet_name="Router-$ID"
