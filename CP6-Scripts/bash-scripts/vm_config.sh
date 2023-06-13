@@ -8,14 +8,6 @@
 ADMIN_PW=""
 USER_NAME=""
 
-# //////////////////////////////////////////////////////////////
-# Comment below lines 
-# /////////////////////////////////////////////////////////////
-# ---------------------------------------------------
-# Windows VM Credentials
-ADMIN_PW="@atoosanasiri2023"
-USER_NAME="atoosanasiri"
-
 # ---------------------------------------------------
 # sshkey pair names
 sshkey_name="sshkey-$ID"

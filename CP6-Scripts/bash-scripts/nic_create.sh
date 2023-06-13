@@ -1,9 +1,5 @@
-echo "Loading variables:"
-echo "network_config.sh"
 source ./network_config.sh
-echo "vm_config.sh"
 source ./vm_config.sh
-echo "Loaded variabes without error"
 
 nic_name=$1
 vnet_name=$2
@@ -28,8 +24,8 @@ else
             -g $RG_NAME \
             --vnet-name $vnet_name \
             --subnet $subnet_name \
-            --network-security-group $nsg_name \
-            --public-ip-address ""
+            --network-security-group $nsg_name 
+            # --public-ip-address ""
 
         echo "NIC Created!"
         echo "NIC List"

@@ -1,9 +1,5 @@
-echo "Loading variables:"
-echo "network_config.sh"
 source ./network_config.sh
-echo "vm_config.sh"
 source ./vm_config.sh
-echo "Loaded variabes without error"
 
 vm_name=$1
 image_name=$2

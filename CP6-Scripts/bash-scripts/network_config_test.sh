@@ -86,13 +86,17 @@ echo "Checking status for Resource Group: $RG_NAME"
 if [[ ! $(az group list -o tsv --query "[?name=='$RG_NAME']") ]]
 then
     echo "doesn't exit! Program will abort now!"
-    exit
+    exit 3
 else 
    echo "exists!"
    echo "Resource groups:"
    az group list --out table
 fi
 
-echo 
-echo "End of Netwrok Configuration"
+
+echo
 echo "---------------------------------------------------"
+echo "Network Config Test Ended without error!"
+echo "END!"
+echo "---------------------------------------------------"
+echo

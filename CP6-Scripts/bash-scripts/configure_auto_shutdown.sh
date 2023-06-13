@@ -30,10 +30,10 @@ shutdown_time="0500"
 for vm_name in "${vm_list[@]}"
 do
 echo "---------------------------------------------------------------------"
-echo "Do you want to Create auto-shutdown schedule for: $vm_name? (yes/no)"
+echo "Creating auto-shutdown schedule for: $vm_name"
 echo "---------------------------------------------------------------------"
-read -r answer
-if [[ "$answer" == "yes" ]]; then
+# read -r answer
+# if [[ "$answer" == "yes" ]]; then
     az vm auto-shutdown -g $RG_NAME -n $vm_name --time $shutdown_time
-fi
+# fi
 done
