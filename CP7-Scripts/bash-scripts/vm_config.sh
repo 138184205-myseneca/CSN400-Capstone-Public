@@ -47,7 +47,7 @@ declare -a NSG_list=("$WC_NSG_name" "$LR_NSG_name" "$LS_NSG_name" "$WS_NSG_name"
 # VM Image, Machine Size, Disk Settings
 VM_IMG_WC="MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-g2:latest"
 VM_IMG_LR="RedHat:RHEL:8-lvm-gen2:latest"
-VM_IMG_WS="MicrosoftWindowsServer:WindowsServer:2019-Datacenter:latest"
+VM_IMG_WS="MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-g2:latest"
 VM_IMG_LS="RedHat:RHEL:8-lvm-gen2:latest"
 
 VM_SIZE="Standard_B2ms"
