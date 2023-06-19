@@ -1,4 +1,4 @@
-# Creating & Configuring Resources with Azure Bash CLI
+# Creating & Configuring VM Images with Azure Bash CLI
 
 ### Useful Links:
 

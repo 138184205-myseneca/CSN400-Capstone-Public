@@ -29,6 +29,7 @@ else
                 --image  $image_name \
                 --size  $VM_SIZE \
                 --storage-sku $OS_DISK_SKU \
+                --data-disk-delete-option Delete \
                 --nics  $nic_name \
                 --no-wait
                 # --  generate-ssh-keys 
