@@ -18,12 +18,11 @@ echo "vm_config.sh"
 source ./vm_config.sh
 echo "Loaded variabes without error"
 
-latest_version=$1
-if [ ! latest_version]; then
-    echo "latest_version parameter not provided"
-    echo "Usage: ./image_create.sh <latest_version>"
-    exit 1
-fi
+
+source ./nic_create.sh "$NIC_WC" "$Student_vnet_name" "$Subnet_WC" "$WC_NSG_name"
+source ./nic_create.sh "$NIC_LR" "$Router_vnet_name" "$Subnet_LR" "$LR_NSG_name"
+source ./nic_create.sh "$NIC_WS" "$Server_vnet_name" "$Subnet_WS" "$WS_NSG_name"
+source ./nic_create.sh "$NIC_LS" "$Server_vnet_name" "$Subnet_LS" "$LS_NSG_name"
 
 function windows_vm_create () {
 vm_name=$1
