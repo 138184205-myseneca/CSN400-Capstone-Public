@@ -40,15 +40,19 @@ then
 fi
 done
 
-for nic_name in "${nic_list[@]}"
-do
-echo "---------------------------------------------------"
-echo "Check if exist: $nic_name"
-echo "---------------------------------------------------"
-if [[ $(az network nic list -g $RG_NAME -o tsv --query "[?name=='$nic_name']") ]]
-then
-    echo "exists!"
-    echo "Deleteing NIC: $nic_name"
-    az network nic delete -g $RG_NAME --name $nic_name
+echo "Are you sure you want to delete all NICs? (yes/no)"
+read -r answer
+if [[ "$answer" == "yes" ]]; then
+    for nic_name in "${nic_list[@]}"
+    do
+    echo "---------------------------------------------------"
+    echo "Check if exist: $nic_name"
+    echo "---------------------------------------------------"
+    if [[ $(az network nic list -g $RG_NAME -o tsv --query "[?name=='$nic_name']") ]]
+    then
+        echo "exists!"
+        echo "Deleteing NIC: $nic_name"
+        az network nic delete -g $RG_NAME --name $nic_name
+    fi
+    done
 fi
-done

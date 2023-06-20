@@ -38,8 +38,10 @@ os_type=$2
 hyperv_gen=$3
 image_ver=$4
 
+hyperv_gen="V2"
+
 base_name=$(echo "$vm_name" | tr '[:upper:]' '[:lower:]')
-image_name="$base_name-gen-$hyperv_gen-ver-$target_version"
+image_name="$base_name-ver-$target_version"
 osDisk_id=$(az vm get-instance-view -g $RG_NAME -n $vm_name -o tsv --query storageProfile.osDisk.managedDisk.id)
 
 echo 
@@ -48,7 +50,7 @@ echo "Image Name: $image_name"
 echo "---------------------------------------------------"
 
 echo "Check if it already exists ---"
-if [[ $(az image list -g $RG_NAME --query "[?name=='$image_name']") ]]
+if [[ $(az image list -g $RG_NAME -o tsv --query "[?name=='$image_name']") ]]
 then
     echo "exists!"
     az image show -g $RG_NAME --name $image_name -o tsv --query id 
@@ -82,15 +84,12 @@ echo "---------------------------------------------------"
 echo
 
 os_type="Windows"
-hyperv_gen="V2"
 vm=$VM_WC
 custom_image_create "$vm" "$os_type" "$hyperv_gen" "$target_version"
-hyperv_gen="V1"
 vm=$VM_WS
 custom_image_create "$vm" "$os_type" "$hyperv_gen" "$target_version" 
 
 os_type="Linux"
-hyperv_gen="V2"
 vm=$VM_LR
 custom_image_create "$vm" "$os_type" "$hyperv_gen" "$target_version"
 vm=$VM_LS

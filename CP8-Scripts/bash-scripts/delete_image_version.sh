@@ -46,7 +46,7 @@ do
     fi
 
     base_name=$(echo "$vm_name" | tr '[:upper:]' '[:lower:]')
-    image_name="$base_name-gen-$hyperv_gen-ver-$target_version"
+    image_name="$base_name-ver-$target_version"
 
     echo "---------------------------------------------------"
     echo "Check if image exist: $image_name"

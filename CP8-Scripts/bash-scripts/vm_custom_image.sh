@@ -37,7 +37,7 @@ nic_name=$2
 hyperv_gen=$3
 
 base_name=$(echo "$vm_name" | tr '[:upper:]' '[:lower:]')
-image_name="$base_name-gen-$hyperv_gen-ver-$target_version"
+image_name="$base_name-ver-$target_version"
 echo $image_name
 
 image_id=$(az image show -g $RG_NAME --name $image_name -o tsv --query id)
@@ -84,17 +84,14 @@ windows_vm_from_custom_image $vm $nic_name $hyperv_gen
 
 vm="$VM_WS"
 nic_name="$NIC_WS"
-hyperv_gen="V1"
 windows_vm_from_custom_image $vm $nic_name $hyperv_gen
 
 vm="$VM_LR"
 nic_name="$NIC_LR"
-hyperv_gen="V2"
 windows_vm_from_custom_image $vm $nic_name $hyperv_gen
 
 vm="$VM_LS"
 nic_name="$NIC_LS"
-hyperv_gen="V2"
 windows_vm_from_custom_image $vm $nic_name $hyperv_gen
 
 echo
