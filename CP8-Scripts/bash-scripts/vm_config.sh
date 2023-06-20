@@ -8,9 +8,6 @@
 USER_NAME=""
 ADMIN_PW=""
 
-USER_NAME="atoosanasiri"
-ADMIN_PW="@atoosanasiri123"
-
 # ---------------------------------------------------
 # sshkey pair names
 sshkey_name="sshkey-$ID"
