@@ -18,12 +18,6 @@ echo "vm_config.sh"
 source ./vm_config.sh
 echo "Loaded variabes without error"
 
-
-source ./nic_create.sh "$NIC_WC" "$Student_vnet_name" "$Subnet_WC" "$WC_NSG_name"
-source ./nic_create.sh "$NIC_LR" "$Router_vnet_name" "$Subnet_LR" "$LR_NSG_name"
-source ./nic_create.sh "$NIC_WS" "$Server_vnet_name" "$Subnet_WS" "$WS_NSG_name"
-source ./nic_create.sh "$NIC_LS" "$Server_vnet_name" "$Subnet_LS" "$LS_NSG_name"
-
 function windows_vm_create () {
 vm_name=$1
 image_name=$2

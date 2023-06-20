@@ -36,5 +36,19 @@ then
     echo "Deleteing VM: $vm_name"
     az vm delete -g $RG_NAME --name $vm_name --yes
     az disk delete --ids $osDisk_id --yes
+    az netwrok nic delete -g $RG_NAME --name $nic
+fi
+done
+
+for nic_name in "${nic_list[@]}"
+do
+echo "---------------------------------------------------"
+echo "Check if exist: $nic_name"
+echo "---------------------------------------------------"
+if [[ $(az network nic list -g $RG_NAME -o tsv --query "[?name=='$nic_name']") ]]
+then
+    echo "exists!"
+    echo "Deleteing NIC: $nic_name"
+    az network nic delete -g $RG_NAME --name $nic_name
 fi
 done
