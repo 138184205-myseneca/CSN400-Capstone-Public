@@ -31,7 +31,10 @@ echo "---------------------------------------------------"
 if [[ $(az vm list -g $RG_NAME -o tsv --query "[?name=='$vm_name']") ]]
 then
     echo "exists!"
+    osDisk_id=$(az vm get-instance-view -g $RG_NAME -n $vm_name -o tsv --query storageProfile.osDisk.managedDisk.id)
+    echo "osDisk_id: $osDisk_id"
     echo "Deleteing VM: $vm_name"
-    az vm delete -g $RG_NAME --name $vm_name --no-wait
+    az vm delete -g $RG_NAME --name $vm_name --yes
+    az disk delete --ids $osDisk_id --yes
 fi
 done

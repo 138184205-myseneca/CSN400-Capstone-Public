@@ -21,5 +21,6 @@ echo "Loaded variabes without error"
 
 echo "forwarding enable ... "
 az network nic update --name  $NIC_LR  \
-                    --resource-group $RG_Name \
-                    --ip-forwarding true 2>/dev/null
+                    --resource-group $RG_NAME \
+                    --ip-forwarding true 
+                    # 2>/dev/null
