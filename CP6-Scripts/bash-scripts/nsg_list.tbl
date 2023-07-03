@@ -1,0 +1,6 @@
+Location       Name       ProvisioningState    ResourceGroup      ResourceGuid
+-------------  ---------  -------------------  -----------------  ------------------------------------
+canadacentral  LR-NSG-51  Succeeded            Student-RG-964277  5985e991-c715-42e0-828b-c804119c34b2
+canadacentral  LS-NSG-51  Succeeded            Student-RG-964277  86b4d380-fe9f-4244-bcaf-8529dbf05560
+canadacentral  WC-NSG-51  Succeeded            Student-RG-964277  6f914ebe-e042-4c9e-bf85-65dfedd4d003
+canadacentral  WS-NSG-51  Succeeded            Student-RG-964277  abbb14d0-7847-48dd-a1cd-e08bdda0ef7a

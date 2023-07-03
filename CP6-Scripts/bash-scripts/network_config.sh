@@ -4,14 +4,14 @@
 # Update the lines that are specific to your network 
 # /////////////////////////////////////////////////////////////
 
-RG_NAME=""     # your student group
-LOCATION=""    # your location
-ID=""          #unique ID assigned to you
+RG_NAME="Student-RG-964277"     # your student group
+LOCATION="canadacentral"    # your location
+ID="51"          #unique ID assigned to you
 
-Student_vnet_name=""
-Student_vnet_address=""
-Client_Subnet_name=""
-Client_Subnet_address=""
+Student_vnet_name="Student-964277-vnet"
+Student_vnet_address="10.34.247.0/24"
+Client_Subnet_name="Virtual-Desktop-Client"
+Client_Subnet_address="10.34.247.0/24"
 
 
 # ---------------------------------------------------

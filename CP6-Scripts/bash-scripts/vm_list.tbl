@@ -1,0 +1,6 @@
+Name    ResourceGroup      Location       Zones
+------  -----------------  -------------  -------
+LR-51   STUDENT-RG-964277  canadacentral
+LS-51   STUDENT-RG-964277  canadacentral
+WC-51   STUDENT-RG-964277  canadacentral
+WS-51   STUDENT-RG-964277  canadacentral
